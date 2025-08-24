@@ -1,0 +1,14 @@
+service: "service:svc"
+description: "A fraud detection API using a scikit-learn model."
+labels:
+  owner: data-science-team
+  project: fraud-detection
+include:
+  - "*.py"
+python:
+  packages:
+    - scikit-learn
+    - pandas
+models:
+  - tag: "fraud_model:latest"
+    alias: fraud_model
